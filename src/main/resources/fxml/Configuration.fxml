@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="container" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usb.controller.ConfigurationController">
+    <children>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="667.0" spacing="20.0">
+            <children>
+                <Button fx:id="configuration" mnemonicParsing="false" onAction="#loadConfiguration" prefHeight="26.0" prefWidth="219.0" text="Configuration Setting" HBox.hgrow="ALWAYS" />
+                <Button fx:id="ssid" mnemonicParsing="false" onAction="#loadSSID" prefHeight="26.0" prefWidth="170.0" text="SSID" HBox.hgrow="ALWAYS" />
+                <Button fx:id="communication" mnemonicParsing="false" onAction="#loadCommunication" text="Communication Setting" />
+            </children>
+        </HBox>
+
+    </children>
+</VBox>
