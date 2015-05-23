@@ -8,7 +8,11 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tab;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.VBox;
 
+import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
 
 public class CalibrationSelectController {
@@ -19,21 +23,28 @@ public class CalibrationSelectController {
     @FXML
     private Button temperature;
 
-    private DeviceTabController parentTabController;
+    private VBox parent;
 
     @FXML
     void openSettings(ActionEvent event) {
         try {
+            JPanel panel = new JPanel();
+            panel.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/CalibrationSettings.fxml"));
             Parent parent = loader.load();
-            parentTabController.setCalibrationTabContent(parent);
+            this.parent.getChildren().set(1, parent);
+            VBox.setVgrow(parent, Priority.ALWAYS);
         } catch (IOException exp) {
             exp.printStackTrace();
         }
     }
 
-    public void setParentTabController(DeviceTabController parentTabController) {
-        this.parentTabController = parentTabController;
+    /**
+     *  TODO
+     *  Change this method to something better
+     */
+    public void setParent(VBox box) {
+        parent = box;
     }
 
 

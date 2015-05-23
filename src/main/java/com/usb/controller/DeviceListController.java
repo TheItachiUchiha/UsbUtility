@@ -1,6 +1,5 @@
 package com.usb.controller;
 
-import com.sun.org.apache.xml.internal.security.Init;
 import com.usb.beans.Device;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -8,7 +7,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Accordion;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TitledPane;
+import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 import java.net.URL;
@@ -22,8 +23,18 @@ public class DeviceListController implements Initializable {
     @FXML
     private Accordion accordion;
 
+    @FXML
+    private ScrollPane scrollPane;
+
+    @FXML
+    private VBox vBox;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        // Bind the scrollpane height and width to vbox
+        accordion.prefWidthProperty().bind(scrollPane.widthProperty());
+
         // Fetch list of devices and populate them
 
         //For each device load the Device FXML and add them

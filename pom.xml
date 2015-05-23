@@ -20,6 +20,19 @@
             <version>0.7</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.aquafx-project</groupId>
+            <artifactId>aquafx</artifactId>
+            <version>0.2</version>
+        </dependency>
+
+        <!-- Font Awesome Icons -->
+        <dependency>
+            <groupId>de.jensd</groupId>
+            <artifactId>fontawesomefx</artifactId>
+            <version>8.4</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -44,18 +57,35 @@
                 </configuration>
             </plugin>-->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
+                <groupId>com.zenjava</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>8.1.2</version>
                 <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>com.usb.main.Main</mainClass>
-                        </manifest>
-                    </archive>
+                    <mainClass>com.usb.main.Main</mainClass>
+                    <vendor>HDEMCOM</vendor>
+                    <jarFileName>HD-EMCOM.jar</jarFileName>
+                    <signJar>
+                        <alias>HDEMCOM</alias>
+                        <storePassword>HDEMCOM</storePassword>
+                    </signJar>
+                    <nativeInstallers/>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
+    <!--
+        For a maven build error
+        Check : https://github.com/javafx-maven-plugin/javafx-maven-plugin/issues/12
+     -->
+    <!--<reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-plugin-plugin</artifactId>
+                <version>3.2</version>
+            </plugin>
+        </plugins>
+    </reporting>-->
 
 </project>

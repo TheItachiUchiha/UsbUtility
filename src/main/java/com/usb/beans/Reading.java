@@ -5,35 +5,45 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class Device {
+/**
+ * Created by abhinay_agarwal on 18/05/15.
+ */
+public class Reading {
 
-    private StringProperty name = new SimpleStringProperty();
-    private StringProperty commMedium = new SimpleStringProperty();
+    private IntegerProperty srNo = new SimpleIntegerProperty();
+    private StringProperty timeStamp = new SimpleStringProperty();
     private IntegerProperty humidity = new SimpleIntegerProperty();
     private IntegerProperty temperature = new SimpleIntegerProperty();
 
-    public String getName() {
-        return name.get();
+    public Reading(int srNo, String timeStamp, int humidity, int temperature) {
+        this.srNo.set(srNo);
+        this.timeStamp.set(timeStamp);
+        this.humidity.set(humidity);
+        this.temperature.set(temperature);
     }
 
-    public StringProperty nameProperty() {
-        return name;
+    public int getSrNo() {
+        return srNo.get();
     }
 
-    public void setName(String name) {
-        this.name.set(name);
+    public IntegerProperty srNoProperty() {
+        return srNo;
     }
 
-    public String getCommMedium() {
-        return commMedium.get();
+    public void setSrNo(int srNo) {
+        this.srNo.set(srNo);
     }
 
-    public StringProperty commMediumProperty() {
-        return commMedium;
+    public String getTimeStamp() {
+        return timeStamp.get();
     }
 
-    public void setCommMedium(String commMedium) {
-        this.commMedium.set(commMedium);
+    public StringProperty timeStampProperty() {
+        return timeStamp;
+    }
+
+    public void setTimeStamp(String timeStamp) {
+        this.timeStamp.set(timeStamp);
     }
 
     public int getHumidity() {

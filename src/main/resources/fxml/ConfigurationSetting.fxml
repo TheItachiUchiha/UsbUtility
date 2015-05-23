@@ -3,79 +3,103 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usb.controller.ConfigurationSettingController">
+   <children>
+      <GridPane alignment="CENTER" gridLinesVisible="true" hgap="10.0" vgap="10.0">
+          <columnConstraints>
+              <ColumnConstraints hgrow="NEVER" />
+              <ColumnConstraints hgrow="NEVER" />
+          </columnConstraints>
+          <rowConstraints>
+              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+              <RowConstraints />
+              <RowConstraints />
+              <RowConstraints />
+              <RowConstraints />
+              <RowConstraints />
+              <RowConstraints />
+              <RowConstraints />
+              <RowConstraints />
+              <RowConstraints />
+              <RowConstraints />
+              <RowConstraints />
+              <RowConstraints />
+              <RowConstraints />
+              <RowConstraints />
+              <RowConstraints />
+              <RowConstraints />
+              <RowConstraints />
+            <RowConstraints />
+          </rowConstraints>
+          <children>
+              <Label text="Int Temp SP">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+              <Label text="Int Temp High Limit" GridPane.rowIndex="1" />
+              <Label text="Int Temp Low Limit" GridPane.rowIndex="2" />
+              <Label text="Int Humi SP" GridPane.rowIndex="3" />
+              <Label text="Int Humi High Limit" GridPane.rowIndex="4" />
+              <Label text="Int Humi Low Limit" GridPane.rowIndex="5" />
+              <Label text="SD card Mirroring" GridPane.rowIndex="6" />
+              <Label text="Battery Mode" GridPane.rowIndex="7" />
+              <Label text="Inbuilt Memory Alarm" GridPane.rowIndex="8" />
+              <Label text="SD Memory Alarm" GridPane.rowIndex="9" />
+              <Label text="SD Memory Record Interval" GridPane.rowIndex="10" />
+              <Label text="Sampling Interval" GridPane.rowIndex="11" />
+              <Label text="Record Interval" GridPane.rowIndex="12" />
+              <Label text="Communication Interval" GridPane.rowIndex="13" />
+              <Label text="Alarm Record Interval" GridPane.rowIndex="14" />
+              <Label text="Alarm Communication Interval" GridPane.rowIndex="15" />
+              <Label text="Comm Interval Retry" GridPane.rowIndex="16" />
+              <Label text="Comm Revival Retry" GridPane.rowIndex="17" />
+              <Label text="SD card debug" GridPane.rowIndex="20" />
+              <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                  <children>
+                      <Button mnemonicParsing="false" text="On" />
+                      <Button mnemonicParsing="false" text="Off" />
+                  </children>
+              </HBox>
+              <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                  <children>
+                      <Button mnemonicParsing="false" text="On" />
+                      <Button mnemonicParsing="false" text="Off" />
+                  </children>
+              </HBox>
+              <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="20">
+                  <children>
+                      <Button mnemonicParsing="false" text="On" />
+                      <Button mnemonicParsing="false" text="Off" />
+                  </children>
+              </HBox>
+            <TextField GridPane.columnIndex="1" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="13" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="14" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="15" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="16" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="17" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="18" />
 
-<GridPane alignment="CENTER_LEFT" hgap="10.0" vgap="10.0" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usb.controller.ConfigurationSettingController">
-    <columnConstraints>
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-    </columnConstraints>
-    <rowConstraints>
-        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        <RowConstraints />
-        <RowConstraints />
-        <RowConstraints />
-        <RowConstraints />
-        <RowConstraints />
-        <RowConstraints />
-        <RowConstraints />
-        <RowConstraints />
-        <RowConstraints />
-        <RowConstraints />
-        <RowConstraints />
-        <RowConstraints />
-        <RowConstraints />
-        <RowConstraints />
-        <RowConstraints />
-        <RowConstraints />
-        <RowConstraints />
-    </rowConstraints>
-    <children>
-        <Label text="Int Temp SP" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
-        <Label text="Int Temp High Limit" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-        <Label text="Int Temp Low Limit" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-        <Label text="Int Humi SP" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-        <Label text="Int Humi High Limit" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-        <Label text="Int Humi Low Limit" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-        <Label text="SD card Mirroring" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-        <Label text="Battery Mode" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
-        <Label text="Inbuilt Memory Alarm" GridPane.halignment="LEFT" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
-        <Label text="SD Memory Alarm" GridPane.halignment="LEFT" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
-        <Label text="SD Memory Record Interval" GridPane.halignment="LEFT" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
-        <Label text="Sampling Interval" GridPane.halignment="LEFT" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
-        <Label text="Record Interval" GridPane.halignment="LEFT" GridPane.rowIndex="12" GridPane.valignment="CENTER" />
-        <Label text="Communication Interval" GridPane.halignment="LEFT" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
-        <Label text="Alarm Record Interval" GridPane.halignment="LEFT" GridPane.rowIndex="14" GridPane.valignment="CENTER" />
-        <Label text="Alarm Communication Interval" GridPane.halignment="LEFT" GridPane.rowIndex="15" GridPane.valignment="CENTER" />
-        <Label text="Comm Interval Retry" GridPane.halignment="LEFT" GridPane.rowIndex="16" GridPane.valignment="CENTER" />
-        <Label text="Comm Revival Retry" GridPane.halignment="LEFT" GridPane.rowIndex="17" GridPane.valignment="CENTER" />
-        <Label text="Time Zone" GridPane.halignment="LEFT" GridPane.rowIndex="18" GridPane.valignment="CENTER" />
-        <Label text="SD card debug" GridPane.halignment="LEFT" GridPane.rowIndex="19" GridPane.valignment="CENTER" />
-        <HBox GridPane.columnIndex="1" GridPane.rowIndex="6">
-            <children>
-                <Button mnemonicParsing="false" text="On" />
-                <Button mnemonicParsing="false" text="Off" />
-            </children>
-        </HBox>
-        <HBox GridPane.columnIndex="1" GridPane.rowIndex="7">
-            <children>
-                <Button mnemonicParsing="false" text="On" />
-                <Button mnemonicParsing="false" text="Off" />
-            </children>
-        </HBox>
-        <HBox GridPane.columnIndex="1" GridPane.rowIndex="19">
-            <children>
-                <Button mnemonicParsing="false" text="On" />
-                <Button mnemonicParsing="false" text="Off" />
-            </children>
-        </HBox>
-
-    </children>
-    <padding>
-        <Insets left="40.0" />
-    </padding>
-    <VBox.margin>
-        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-    </VBox.margin>
-</GridPane>
+                            </children>
+          <padding>
+              <Insets left="40.0" />
+          </padding>
+      </GridPane>
+   </children>
+</VBox>

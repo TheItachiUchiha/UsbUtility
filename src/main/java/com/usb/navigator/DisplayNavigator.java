@@ -6,6 +6,8 @@ import com.usb.controller.MainController;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.Region;
 
 import java.io.IOException;
 
@@ -23,7 +25,7 @@ public class DisplayNavigator {
      */
     public static final String MAIN    = "/fxml/Main.fxml";
     public static final String DEVICE_LIST = "/fxml/DeviceList.fxml";
-    public static final String DEVICE_TAB = "/fxml/DeviceTab.fxml";
+    public static final String DEVICE_CONTAINER = "/fxml/DeviceContainer.fxml";
 
 
     /** The main application layout controller. */
@@ -63,8 +65,8 @@ public class DisplayNavigator {
                     DisplayNavigator.class.getResource(
                             fxml
                     ));
-            Parent parent = (Parent) loader.load();
-            mainController.setCenter(parent);
+            Region pane = loader.load();
+            mainController.setCenter(pane);
         } catch (IOException e) {
             e.printStackTrace();
         }

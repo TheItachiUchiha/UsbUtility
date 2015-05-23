@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
@@ -28,7 +29,14 @@ public class ConfigurationController {
 
     @FXML
     void loadCommunication(ActionEvent event) {
-
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/CommunicationSetting.fxml"));
+            Parent parent = loader.load();
+            container.getChildren().set(1, parent);
+            VBox.setVgrow(parent, Priority.ALWAYS);
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
     }
 
     @FXML
@@ -36,12 +44,8 @@ public class ConfigurationController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/ConfigurationSetting.fxml"));
             Parent parent = loader.load();
-            // If any previously loaded data
-            if(container.getChildren().size()==2) {
-                container.getChildren().remove(1);
-            }
-            container.getChildren().add(parent);
-
+            container.getChildren().set(1, parent);
+            VBox.setVgrow(parent, Priority.ALWAYS);
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
@@ -49,7 +53,14 @@ public class ConfigurationController {
 
     @FXML
     void loadSSID(ActionEvent event) {
-
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/ConfigurationSsid.fxml"));
+            Parent parent = loader.load();
+            container.getChildren().set(1, parent);
+            VBox.setVgrow(parent, Priority.ALWAYS);
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
     }
 
 
