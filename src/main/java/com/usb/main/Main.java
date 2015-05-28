@@ -29,8 +29,8 @@ public class Main extends Application {
         // Load Devices on startup
         mainController.loadDevices();
 
+
         Scene scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("/css/slideout.css").toExternalForm());
 
         stage.setScene(scene);
         stage.setResizable(true);
@@ -38,7 +38,9 @@ public class Main extends Application {
         stage.setTitle("HD EMCOM USB UTILITY");
         stage.setMaximized(true);
         stage.show();
-        // FlatterFX.style();
+
+        //Change to default theme
+        mainController.selectDefaultTheme();
     }
 
     public static void main(String[] args) {

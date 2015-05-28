@@ -8,9 +8,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.VBox;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -22,6 +24,12 @@ public class DataDownloadController implements Initializable {
 
     @FXML
     private TableView<Reading> tableView;
+
+    @FXML
+    private VBox vBox;
+
+    @FXML
+    private ScrollPane scrollPane;
 
     @FXML
     private Button exportToPDF;
@@ -102,6 +110,10 @@ public class DataDownloadController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        vBox.prefWidthProperty().bind(scrollPane.widthProperty());
+        //tableView.prefWidthProperty().bind(vBox.widthProperty());
+
+
         loadDummyValuesInGraph();
         loadDummyDataInTableView();
     }

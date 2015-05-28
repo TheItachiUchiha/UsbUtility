@@ -8,25 +8,24 @@
 
 <HBox alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usb.controller.DataDownloadController">
    <children>
-      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" HBox.hgrow="ALWAYS">
-         <children>
-            <LineChart fx:id="lineChart" title="Device Status" VBox.vgrow="ALWAYS">
-              <xAxis>
-                <CategoryAxis side="BOTTOM" />
-              </xAxis>
-              <yAxis>
-                <NumberAxis side="LEFT" />
-              </yAxis>
-            </LineChart>
-            <TableView fx:id="tableView" VBox.vgrow="ALWAYS">
-              <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
-              </columns>
-            </TableView>
-         </children>
-      </VBox>
-      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="152.0" spacing="20.0">
+      <ScrollPane fx:id="scrollPane" HBox.hgrow="ALWAYS">
+         <content>
+            <VBox fx:id="vBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity">
+               <children>
+                  <LineChart fx:id="lineChart" title="Device Status" VBox.vgrow="ALWAYS">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <TableView fx:id="tableView" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <VBox alignment="CENTER" prefWidth="200.0" spacing="20.0" HBox.hgrow="SOMETIMES">
          <children>
             <Button fx:id="exportToPDF" mnemonicParsing="false" text="Export to PDF" />
             <Button fx:id="exportToExcel" mnemonicParsing="false" text="Export to Excel" />

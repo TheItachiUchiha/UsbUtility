@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
@@ -26,11 +27,13 @@ public class MainController implements Initializable {
     @FXML
     private Label appName;
 
+    @FXML
+    private ComboBox<String> themeChange;
+
     public void setCenter(Region node) {
 
         borderPane.setCenter(node);
         borderPane.prefHeightProperty().bind(node.heightProperty().add(80));
-
     }
 
     @FXML
@@ -38,9 +41,23 @@ public class MainController implements Initializable {
         DisplayNavigator.loadVista(DisplayNavigator.DEVICE_LIST);
     }
 
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        themeChange.valueProperty().addListener((ov, oldValue, newValue) -> {
+            if(newValue.equalsIgnoreCase("Dark Theme")) {
+                themeChange.getScene().getStylesheets().clear();
+                themeChange.getScene().getStylesheets().add(getClass().getResource("/css/darktheme.css").toExternalForm());
+            } else {
+                themeChange.getScene().getStylesheets().clear();
+                themeChange.getScene().getStylesheets().add(getClass().getResource("/css/lighttheme.css").toExternalForm());
+            }
+        });
+    }
 
+    public void selectDefaultTheme() {
+        //Change to default theme
+        themeChange.getSelectionModel().select(0);
     }
 
     public void loadDevices () {
