@@ -4,15 +4,11 @@ import com.usb.navigator.DisplayNavigator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
-import javafx.scene.layout.VBox;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -45,9 +41,9 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         themeChange.valueProperty().addListener((ov, oldValue, newValue) -> {
-            if(newValue.equalsIgnoreCase("Dark Theme")) {
+            if(newValue.equalsIgnoreCase("Windows Theme")) {
                 themeChange.getScene().getStylesheets().clear();
-                themeChange.getScene().getStylesheets().add(getClass().getResource("/css/darktheme.css").toExternalForm());
+                themeChange.getScene().getStylesheets().add(getClass().getResource("/css/windows.css").toExternalForm());
             } else {
                 themeChange.getScene().getStylesheets().clear();
                 themeChange.getScene().getStylesheets().add(getClass().getResource("/css/lighttheme.css").toExternalForm());

@@ -1,8 +1,5 @@
 package com.usb.main;
 
-import com.aquafx_project.AquaFx;
-import com.guigarage.flatterfx.FlatterFX;
-import com.guigarage.material.MaterialDesignPane;
 import com.usb.controller.MainController;
 import com.usb.navigator.DisplayNavigator;
 import javafx.application.Application;
@@ -28,7 +25,6 @@ public class Main extends Application {
         DisplayNavigator.setMainController(mainController);
         // Load Devices on startup
         mainController.loadDevices();
-
 
         Scene scene = new Scene(root);
 

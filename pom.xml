@@ -9,23 +9,6 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
-        <dependency>
-            <groupId>com.guigarage</groupId>
-            <artifactId>material-design-fx</artifactId>
-            <version>0.7</version>
-        </dependency>
-        <dependency>
-            <groupId>com.guigarage</groupId>
-            <artifactId>flatter</artifactId>
-            <version>0.7</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.aquafx-project</groupId>
-            <artifactId>aquafx</artifactId>
-            <version>0.2</version>
-        </dependency>
-
         <!-- Font Awesome Icons -->
         <dependency>
             <groupId>de.jensd</groupId>

@@ -3,17 +3,24 @@ package com.usb.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 /**
  * Created by itachi on 18/5/15.
  */
-public class ConfigurationController {
+public class ConfigurationController implements Initializable {
+
+    @FXML
+    private ScrollPane scrollPane;
 
     @FXML
     private VBox container;
@@ -64,4 +71,8 @@ public class ConfigurationController {
     }
 
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        container.prefWidthProperty().bind(scrollPane.widthProperty());
+    }
 }

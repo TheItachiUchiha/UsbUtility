@@ -1,105 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <VBox alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usb.controller.ConfigurationSettingController">
-   <children>
-      <GridPane alignment="CENTER" gridLinesVisible="true" hgap="10.0" vgap="10.0">
-          <columnConstraints>
-              <ColumnConstraints hgrow="NEVER" />
-              <ColumnConstraints hgrow="NEVER" />
-          </columnConstraints>
-          <rowConstraints>
-              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
-              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
-              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
-              <RowConstraints />
-              <RowConstraints />
-              <RowConstraints />
-              <RowConstraints />
-              <RowConstraints />
-              <RowConstraints />
-              <RowConstraints />
-              <RowConstraints />
-              <RowConstraints />
-              <RowConstraints />
-              <RowConstraints />
-              <RowConstraints />
-              <RowConstraints />
-              <RowConstraints />
-              <RowConstraints />
-              <RowConstraints />
-              <RowConstraints />
-            <RowConstraints />
-          </rowConstraints>
-          <children>
-              <Label text="Int Temp SP">
-               <GridPane.margin>
-                  <Insets />
-               </GridPane.margin>
-               <padding>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </padding>
-            </Label>
-              <Label text="Int Temp High Limit" GridPane.rowIndex="1" />
-              <Label text="Int Temp Low Limit" GridPane.rowIndex="2" />
-              <Label text="Int Humi SP" GridPane.rowIndex="3" />
-              <Label text="Int Humi High Limit" GridPane.rowIndex="4" />
-              <Label text="Int Humi Low Limit" GridPane.rowIndex="5" />
-              <Label text="SD card Mirroring" GridPane.rowIndex="6" />
-              <Label text="Battery Mode" GridPane.rowIndex="7" />
-              <Label text="Inbuilt Memory Alarm" GridPane.rowIndex="8" />
-              <Label text="SD Memory Alarm" GridPane.rowIndex="9" />
-              <Label text="SD Memory Record Interval" GridPane.rowIndex="10" />
-              <Label text="Sampling Interval" GridPane.rowIndex="11" />
-              <Label text="Record Interval" GridPane.rowIndex="12" />
-              <Label text="Communication Interval" GridPane.rowIndex="13" />
-              <Label text="Alarm Record Interval" GridPane.rowIndex="14" />
-              <Label text="Alarm Communication Interval" GridPane.rowIndex="15" />
-              <Label text="Comm Interval Retry" GridPane.rowIndex="16" />
-              <Label text="Comm Revival Retry" GridPane.rowIndex="17" />
-              <Label text="SD card debug" GridPane.rowIndex="20" />
-              <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="6">
-                  <children>
-                      <Button mnemonicParsing="false" text="On" />
-                      <Button mnemonicParsing="false" text="Off" />
-                  </children>
-              </HBox>
-              <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="7">
-                  <children>
-                      <Button mnemonicParsing="false" text="On" />
-                      <Button mnemonicParsing="false" text="Off" />
-                  </children>
-              </HBox>
-              <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="20">
-                  <children>
-                      <Button mnemonicParsing="false" text="On" />
-                      <Button mnemonicParsing="false" text="Off" />
-                  </children>
-              </HBox>
-            <TextField GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="8" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="9" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="10" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="11" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="12" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="13" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="14" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="15" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="16" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="17" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="18" />
+    <children>
+        <GridPane alignment="CENTER" gridLinesVisible="true">
+            <columnConstraints>
+                <ColumnConstraints hgrow="NEVER" />
+                <ColumnConstraints hgrow="NEVER" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints vgrow="NEVER" />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+            <children>
+                <Label text="Int Temp SP">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <Label text="Int Temp High Limit" GridPane.rowIndex="1">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <Label text="Int Temp Low Limit" GridPane.rowIndex="2">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <Label text="Int Humi SP" GridPane.rowIndex="3">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <Label text="Int Humi High Limit" GridPane.rowIndex="4">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <Label text="Int Humi Low Limit" GridPane.rowIndex="5">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <Label text="SD card Mirroring" GridPane.rowIndex="6">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <Label text="Battery Mode" GridPane.rowIndex="7">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <Label text="Inbuilt Memory Alarm" GridPane.rowIndex="8">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <Label text="SD Memory Alarm" GridPane.rowIndex="9">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <Label text="SD Memory Record Interval" GridPane.rowIndex="10">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <Label text="Sampling Interval" GridPane.rowIndex="11">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <Label text="Record Interval" GridPane.rowIndex="12">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <Label text="Communication Interval" GridPane.rowIndex="13">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <Label text="Alarm Record Interval" GridPane.rowIndex="14">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <Label text="Alarm Communication Interval" GridPane.rowIndex="15">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <Label text="Comm Interval Retry" GridPane.rowIndex="16">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <Label text="Comm Revival Retry" GridPane.rowIndex="17">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <Label text="SD card debug" GridPane.rowIndex="20">
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                    <children>
+                        <Button mnemonicParsing="false" text="On" />
+                        <Button mnemonicParsing="false" text="Off" />
+                    </children>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </GridPane.margin>
+                </HBox>
+                <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                    <children>
+                        <Button mnemonicParsing="false" text="On" />
+                        <Button mnemonicParsing="false" text="Off" />
+                    </children>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </GridPane.margin>
+                </HBox>
+                <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="20">
+                    <children>
+                        <Button mnemonicParsing="false" text="On" />
+                        <Button mnemonicParsing="false" text="Off" />
+                    </children>
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </GridPane.margin>
+                </HBox>
+                <TextField GridPane.columnIndex="1">
+                    <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </GridPane.margin>
+                </TextField>
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="1">          <GridPane.margin>             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />          </GridPane.margin></TextField>
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="2">          <GridPane.margin>             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />          </GridPane.margin></TextField>
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="3">          <GridPane.margin>             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />          </GridPane.margin></TextField>
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="4">          <GridPane.margin>             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />          </GridPane.margin></TextField>
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="5">          <GridPane.margin>             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />          </GridPane.margin></TextField>
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="8">          <GridPane.margin>             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />          </GridPane.margin></TextField>
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="9">          <GridPane.margin>             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />          </GridPane.margin></TextField>
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="10">          <GridPane.margin>             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />          </GridPane.margin></TextField>
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="11">          <GridPane.margin>             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />          </GridPane.margin></TextField>
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="12">          <GridPane.margin>             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />          </GridPane.margin></TextField>
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="13">          <GridPane.margin>             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />          </GridPane.margin></TextField>
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="14">          <GridPane.margin>             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />          </GridPane.margin></TextField>
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="15">          <GridPane.margin>             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />          </GridPane.margin></TextField>
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="16">          <GridPane.margin>             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />          </GridPane.margin></TextField>
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="17">          <GridPane.margin>             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />          </GridPane.margin></TextField>
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="18">          <GridPane.margin>             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />          </GridPane.margin></TextField>
 
-                            </children>
-          <padding>
-              <Insets left="40.0" />
-          </padding>
-      </GridPane>
-   </children>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </GridPane>
+    </children>
 </VBox>

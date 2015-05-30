@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 
 
-<GridPane alignment="CENTER" gridLinesVisible="true" hgap="10.0" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usb.controller.ConfigurationSettingController">
+<GridPane alignment="CENTER" gridLinesVisible="true" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usb.controller.ConfigurationSettingController">
     <columnConstraints>
         <ColumnConstraints fillWidth="true" hgrow="NEVER" />
         <ColumnConstraints hgrow="NEVER" />
@@ -38,41 +38,161 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
       </Label>
-        <Label text="DHCP enable" GridPane.rowIndex="1" />
-        <Label text="IP" GridPane.rowIndex="2" />
-        <Label text="Server IP" GridPane.rowIndex="3" />
-        <Label text="Server MAC" GridPane.rowIndex="4" />
-        <Label text="Server Port Number" GridPane.rowIndex="5" />
-        <Label prefHeight="24.0" prefWidth="140.0" text="Serial BUS Baud Rate" GridPane.rowIndex="6" />
-        <Label prefHeight="23.0" prefWidth="136.0" text="Serial BUS Station ID" GridPane.rowIndex="7" />
-        <Label text="Sub Net Mask" GridPane.rowIndex="8" />
-        <Label text="Default gateway" GridPane.rowIndex="9" />
-        <Label text="Preferred DNS Server" GridPane.rowIndex="10" />
-        <Label text="Alternate DNS Server" GridPane.rowIndex="11" />
-        <Label text="Router SSID" GridPane.rowIndex="12" />
-        <Label text="Router Security" GridPane.rowIndex="13" />
-        <Label text="Router Password" GridPane.rowIndex="14" />
+        <Label text="DHCP enable" GridPane.rowIndex="1">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+        <Label text="IP" GridPane.rowIndex="2">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+        <Label text="Server IP" GridPane.rowIndex="3">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+        <Label text="Server MAC" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+        <Label text="Server Port Number" GridPane.rowIndex="5">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+        <Label prefHeight="24.0" prefWidth="140.0" text="Serial BUS Baud Rate" GridPane.rowIndex="6">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+        <Label prefHeight="23.0" prefWidth="136.0" text="Serial BUS Station ID" GridPane.rowIndex="7">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+        <Label text="Sub Net Mask" GridPane.rowIndex="8">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+        <Label text="Default gateway" GridPane.rowIndex="9">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+        <Label text="Preferred DNS Server" GridPane.rowIndex="10">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+        <Label text="Alternate DNS Server" GridPane.rowIndex="11">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+        <Label text="Router SSID" GridPane.rowIndex="12">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+        <Label text="Router Security" GridPane.rowIndex="13">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+        <Label text="Router Password" GridPane.rowIndex="14">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
         <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
             <children>
                 <Button mnemonicParsing="false" text="On" />
                 <Button mnemonicParsing="false" text="Off" />
             </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
         </HBox>
-      <TextField GridPane.columnIndex="1" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="8" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="9" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="10" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="11" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="12" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="13" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="14" />
+      <TextField GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="8">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="9">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="10">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="11">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="12">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="13">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="14">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextField>
 
-                            </children>
+                                        </children>
     <padding>
-        <Insets left="40.0" />
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
     </padding>
 </GridPane>
