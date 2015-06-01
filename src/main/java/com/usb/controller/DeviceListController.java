@@ -62,6 +62,7 @@ public class DeviceListController implements Initializable {
             device.setCommMedium("Eth"+String.valueOf(i));
             device.setHumidity((int)(Math.random()*100));
             device.setTemperature((int)(Math.random()*100));
+            device.setSupportedTypes("Humidity, Temperature");
             list.add(device);
         }
 

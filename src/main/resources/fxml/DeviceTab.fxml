@@ -9,7 +9,7 @@
    <children>
       <HBox alignment="CENTER">
          <children>
-            <Label alignment="CENTER" text="Device Name : Something" HBox.hgrow="ALWAYS">
+            <Label alignment="CENTER" text="Device Name : Something" HBox.hgrow="ALWAYS" styleClass="label-header-min">
                <VBox.margin>
                   <Insets bottom="10.0" left="100.0" right="10.0" top="10.0" />
                </VBox.margin>

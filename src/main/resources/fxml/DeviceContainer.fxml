@@ -3,6 +3,7 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
 
 <BorderPane fx:id="container" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.usb.controller.DeviceContainerController">
    <top>
@@ -11,9 +12,18 @@
    <left>
       <VBox alignment="CENTER_RIGHT" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" text="CONFIGURATION" />
-            <Button mnemonicParsing="false" text="CALIBRATION" />
-            <Button mnemonicParsing="false" text="DATA DOWNLOAD" />
+            <ToggleButton fx:id="configuration" mnemonicParsing="false" onAction="#loadConfiguration" text="CONFIGURATION " HBox.hgrow="ALWAYS">
+               <graphic>
+                  <FontAwesomeIconView glyphName="EDIT" styleClass="green-icon" />
+               </graphic></ToggleButton>
+            <ToggleButton fx:id="calibration" mnemonicParsing="false" onAction="#loadCalibration" text="CALIBRATION      " HBox.hgrow="ALWAYS">
+               <graphic>
+                  <FontAwesomeIconView glyphName="CALCULATOR" />
+               </graphic></ToggleButton>
+            <ToggleButton fx:id="dataDownload" mnemonicParsing="false" onAction="#loadDataDownload" text="DATADOWNLOAD" HBox.hgrow="ALWAYS">
+               <graphic>
+                  <FontAwesomeIconView glyphName="BAR_CHART" />
+               </graphic></ToggleButton>
          </children>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

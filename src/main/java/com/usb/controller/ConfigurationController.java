@@ -7,6 +7,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.ToggleButton;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 
@@ -26,13 +28,15 @@ public class ConfigurationController implements Initializable {
     private VBox container;
 
     @FXML
-    private Button configuration;
+    private ToggleButton configuration;
 
     @FXML
-    private Button ssid;
+    private ToggleButton ssid;
 
     @FXML
-    private Button communication;
+    private ToggleButton communication;
+
+    private ToggleGroup group = new ToggleGroup();
 
     @FXML
     void loadCommunication(ActionEvent event) {
@@ -73,6 +77,10 @@ public class ConfigurationController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        communication.setToggleGroup(group);
+        configuration.setToggleGroup(group);
+        ssid.setToggleGroup(group);
         container.prefWidthProperty().bind(scrollPane.widthProperty());
+        configuration.fire();
     }
 }

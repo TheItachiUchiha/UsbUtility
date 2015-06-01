@@ -19,7 +19,7 @@
             <Button fx:id="deviceListButton" mnemonicParsing="false" onAction="#showDeviceList" text="Device List" />
             <HBox alignment="CENTER" HBox.hgrow="ALWAYS">
                <children>
-                  <Label fx:id="appName" text="HD EMCON USB UTILITY" />
+                  <Label fx:id="appName" text="HD EMCON USB UTILITY" styleClass="label-header-max" />
                </children>
             </HBox>
              <ComboBox fx:id="themeChange" promptText="Change Theme">

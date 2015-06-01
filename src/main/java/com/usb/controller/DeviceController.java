@@ -44,8 +44,8 @@ public class DeviceController implements Initializable {
 
     public void setDetails(Device device) {
         titledPane.setText("Device : "  + device.getName() + "\n\n" + "Communication Medium : " + device.getCommMedium() );
-        humidity.setText("Humidity : " + device.getHumidity() + ApplicationConstants.SPACE + "%");
-        temperature.setText("Temperature : " + device.getTemperature() + ApplicationConstants.SPACE + "C");
+        humidity.setText(device.getSupportedTypes());
+        //temperature.setText("Temperature : " + device.getTemperature() + ApplicationConstants.SPACE + "C");
     }
 
     @FXML

@@ -13,7 +13,15 @@
 }
 .label {
     -fx-text-fill: black;
+    -fx-font-size: 12px;
+}
+
+.label-header-max {
     -fx-font-size: 17px;
+}
+
+.label-header-min {
+    -fx-font-size: 15px;
 }
 
 .hide-left {
@@ -46,20 +54,20 @@
     -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
     -fx-background-radius: 8;
     -fx-background-color:
-        linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),
-        #9d4024,
-        #d86e3a,
-        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c);
+        linear-gradient(from 0% 93% to 0% 100%, #b56842 0%, #a66241 100%),
+        #b0664f,
+        #df8b61,
+        radial-gradient(center 50% 50%, radius 100%, #df8b61, #d07156);
     -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
     -fx-font-weight: bold;
     -fx-font-size: 1.1em;
 }
 .button:hover {
     -fx-background-color:
-        linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),
+        linear-gradient(from 0% 93% to 0% 100%, #b56842 0%, #a66241 100%),
         #9d4024,
         #d86e3a,
-        radial-gradient(center 50% 50%, radius 100%, #ea7f4b, #c54e2c);
+        radial-gradient(center 50% 50%, radius 100%, #ee986e, #d07156);
 }
 .button:pressed {
     -fx-padding: 10 15 13 15;
@@ -71,15 +79,56 @@
 }
 
 
+/**
+* Toggle Button
+**/
+
+.toggle-button {
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color:
+    linear-gradient(from 0% 93% to 0% 100%, #b56842 0%, #a66241 100%),
+    #b0664f,
+    #df8b61,
+    radial-gradient(center 50% 50%, radius 100%, #df8b61, #d07156);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+}
+.toggle-button:hover {
+    -fx-background-color:
+    linear-gradient(from 0% 93% to 0% 100%, #b56842 0%, #a66241 100%),
+    #9d4024,
+    #d86e3a,
+    radial-gradient(center 50% 50%, radius 100%, #ee986e, #d07156);
+}
+.toggle-button:pressed {
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+
+.toggle-button:selected {
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+
+
+.toggle-button Text {
+    -fx-fill: white;
+    -fx-effect: dropshadow( gaussian , #a30000 , 0,0,0,2 );
+}
+
+
 .combo-box{
     -fx-padding: 8 15 15 15;
     -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
     -fx-background-radius: 8;
     -fx-background-color:
-        linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),
-        #9d4024,
-        #d86e3a,
-        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c);
+    linear-gradient(from 0% 93% to 0% 100%, #b56842 0%, #a66241 100%),
+    #b0664f,
+    #df8b61,
+    radial-gradient(center 50% 50%, radius 100%, #df8b61, #d07156);
     -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
     -fx-font-weight: bold;
     -fx-font-size: 1.1em;
@@ -96,19 +145,16 @@
 /** On hover and on expanded */
 .titled-pane > .title:hover {
         -fx-background-color:
-                linear-gradient(#f0ff35, #a9ff00),
-                radial-gradient(center 50% -40%, radius 200%, #dc9480 45%, #e7b8aa 50%);
+                linear-gradient(#dc9480, #e7b8aa);
 }
 
 .titled-pane:expanded > .title:hover {
         -fx-background-color:
-                linear-gradient(#f0ff35, #a9ff00),
-                radial-gradient(center 50% -40%, radius 200%, #dc9480 45%, #e7b8aa 50%);
+        linear-gradient(#dc9480, #e7b8aa);
 }
 
 .titled-pane:expanded > .title {
         -fx-background-color:
-                linear-gradient(#f0ff35, #a9ff00),
-                radial-gradient(center 50% -40%, radius 200%, #dc9480 45%, #e7b8aa 50%);
+        linear-gradient(#dc9480, #e7b8aa);
 
 }

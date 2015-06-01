@@ -11,6 +11,7 @@ public class Device {
     private StringProperty commMedium = new SimpleStringProperty();
     private IntegerProperty humidity = new SimpleIntegerProperty();
     private IntegerProperty temperature = new SimpleIntegerProperty();
+    private StringProperty supportedTypes = new SimpleStringProperty();
 
     public String getName() {
         return name.get();
@@ -58,5 +59,17 @@ public class Device {
 
     public void setTemperature(int temperature) {
         this.temperature.set(temperature);
+    }
+
+    public String getSupportedTypes() {
+        return supportedTypes.get();
+    }
+
+    public StringProperty supportedTypesProperty() {
+        return supportedTypes;
+    }
+
+    public void setSupportedTypes(String supportedTypes) {
+        this.supportedTypes.set(supportedTypes);
     }
 }

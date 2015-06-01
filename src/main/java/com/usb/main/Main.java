@@ -26,7 +26,7 @@ public class Main extends Application {
         // Load Devices on startup
         mainController.loadDevices();
 
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(root, 900, 600);
 
         stage.setScene(scene);
         stage.setResizable(true);

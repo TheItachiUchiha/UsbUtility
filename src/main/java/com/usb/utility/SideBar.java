@@ -68,7 +68,7 @@ public class SideBar extends VBox {
                         buttonIcon.getStyleClass().remove("hide-left");
                         buttonIcon.getStyleClass().add("show-right");
                         for(Node node : nodes) {
-                            Button button = ((Button)node);
+                            ToggleButton button = ((ToggleButton)node);
                             button.setText("");
                             button.getGraphic().setStyle("-glyph-size: 25px;-fx-fill: #27C24C");
                         }
@@ -97,17 +97,17 @@ public class SideBar extends VBox {
                         for(int i=0; i<3;i++) {
                             switch (i){
                                 case 0:
-                                    Button button = ((Button)nodes[i]);
+                                    ToggleButton button = ((ToggleButton)nodes[i]);
                                     button.setText(PropertiesUtil.getValue("configuration"));
                                     button.getGraphic().setStyle("-glyph-size: 15px;");
                                     break;
                                 case 1:
-                                    Button button1 = ((Button)nodes[i]);
+                                    ToggleButton button1 = ((ToggleButton)nodes[i]);
                                     button1.setText(PropertiesUtil.getValue("calibration"));
                                     button1.getGraphic().setStyle("-glyph-size: 15px;");
                                     break;
                                 case 2:
-                                    Button button2 = ((Button)nodes[i]);
+                                    ToggleButton button2 = ((ToggleButton)nodes[i]);
                                     button2.setText(PropertiesUtil.getValue("data-download"));
                                     button2.getGraphic().setStyle("-glyph-size: 15px;");
                                     break;
